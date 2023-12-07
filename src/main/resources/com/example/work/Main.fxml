@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.work.MainController">
+   <children>
+
+      <ImageView fitHeight="621.0" fitWidth="898.0" layoutY="1.0">
+         <image>
+            <Image url="@../../../image/background1.jpg" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="7.0" layoutY="278.0" prefHeight="341.0" prefWidth="447.0" text="                       山西省小店区新型智慧医院简介    &#10;&#10;&#10;                          作者:第九小组  时间:2023/12/2  编辑:第九小组&#10;&#10;&#10;    医院为国家卫健委冠脉诊疗及心律失常介入培训基地、脑卒中&#10;筛查与防治基地，国家住院医师规范化培训基地，国家药物临床&#10;试验机构，胸痛、心衰、房颤三大标准版中心通过国家认证。心&#10;血管内科为国家级临床重点专科，中医科为全国综合医院中医药&#10;工作示范单位。&#10;    拥有肿瘤科、普外科、消化内科、内分泌代谢科、呼吸与危重&#10;症医学科、皮肤科、儿科、医学影像科等16个省级临床重点专科，&#10;妇产医学、新生儿医学为省妇幼健康重点学科，皮肤病学为“十四&#10;五”省医学重点学科建设单位，重点专学科数量和质量位居全市前&#10;列。">
+      </TextArea>
+      <Label layoutX="230.0" layoutY="14.0" prefHeight="72.0" prefWidth="456.0" text="欢迎使用智慧医疗管理系统" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="104.0" prefHeight="51.0" prefWidth="76.0" text="姓名:" textFill="#da0d0d">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="145.0" prefHeight="51.0" prefWidth="76.0" text="账号:" textFill="#cd0909">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text id="name" fx:id="name" layoutX="200.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IKUN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text id="account" fx:id="account" layoutX="199.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NULL">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="107.0" layoutY="190.0" prefHeight="30.0" prefWidth="76.0" text="年龄:" textFill="#cd0c0c">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Text fx:id="age" id="age" layoutX="199.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NULL">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+
+      <TableView fx:id="News" layoutX="458.0" layoutY="275.0" prefHeight="347.0" prefWidth="434.0">
+         <columns>
+            <TableColumn fx:id="date" prefWidth="46.0" text="日期" />
+            <TableColumn fx:id="writer" prefWidth="74.0" text="撰稿人" />
+            <TableColumn fx:id="headline" prefWidth="48.0" text="标题" />
+            <TableColumn fx:id="readCount" prefWidth="66.0" text="阅读量" />
+            <TableColumn fx:id="likes" prefWidth="46.0" text="点赞" />
+            <TableColumn fx:id="comments" prefWidth="56.0" text="评论" />
+            <TableColumn fx:id="url" prefWidth="97.0" text="网址" />
+         </columns>
+      </TableView>
+      <Button fx:id="exit" layoutX="771.0" layoutY="209.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="115.0" text="退出系统" />
+      <Button fx:id="show_room" layoutX="477.0" layoutY="101.0" mnemonicParsing="false" onAction="#onshowshowroomclick" prefHeight="37.0" prefWidth="115.0" text="病房信息查询" />
+      <Button fx:id="show_patient" layoutX="477.0" layoutY="101.0" mnemonicParsing="false" onAction="#onsearchallpatientclick" prefHeight="37.0" prefWidth="115.0" text="患者信息查询" />
+      <Button fx:id="show_doctor" layoutX="629.0" layoutY="101.0" mnemonicParsing="false" onAction="#onshowdoctorclick" prefHeight="37.0" prefWidth="115.0" text="医生信息查询" />
+      <Button fx:id="show_department" layoutX="771.0" layoutY="103.0" mnemonicParsing="false" onAction="#onShowDepartmentClick" prefHeight="37.0" prefWidth="115.0" text="科室信息查询" />
+      <Button fx:id="show_drug" layoutX="477.0" layoutY="209.0" mnemonicParsing="false" onAction="#onShowDrugClick" prefHeight="37.0" prefWidth="115.0" text="药品信息查询" />
+      <Button fx:id="manage_doctor" layoutX="771.0" layoutY="157.0" mnemonicParsing="false" onAction="#onManageDoctorClick" prefHeight="37.0" prefWidth="115.0" text="管理医生信息" />
+      <Button fx:id="manage_patient" layoutX="629.0" layoutY="156.0" mnemonicParsing="false" onAction="#onManagePatientClick" prefHeight="37.0" prefWidth="115.0" text="管理患者信息" />
+      <Button fx:id="manage_drug" layoutX="629.0" layoutY="101.0" mnemonicParsing="false" onAction="#onManageDrugClick" prefHeight="37.0" prefWidth="115.0" text="管理药品信息" />
+      <Button fx:id="manage_prescription" layoutX="771.0" layoutY="103.0" mnemonicParsing="false" onAction="#onManagePrescriptionClick" prefHeight="37.0" prefWidth="115.0" text="管理处方信息" />
+      <Button fx:id="manage_department" layoutX="771.0" layoutY="103.0" mnemonicParsing="false" onAction="#onManageDepartmentClick" prefHeight="37.0" prefWidth="115.0" text="管理科室信息" />
+      <Button fx:id="manage_ward" layoutX="771.0" layoutY="103.0" mnemonicParsing="false" onAction="#onManageWardClick" prefHeight="37.0" prefWidth="115.0" text="管理病房信息" />
+
+      <Button fx:id="add_reservation" layoutX="477.0" layoutY="156.0" mnemonicParsing="false" onAction="#onAddReservationClick" prefHeight="37.0" prefWidth="115.0" text="预约挂号" />
+      <Button fx:id="show_reservation" layoutX="629.0" layoutY="157.0" mnemonicParsing="false" onAction="#onShowReservationClick" prefHeight="37.0" prefWidth="115.0" text="预约记录查询" />
+      <Button fx:id="cancel_reservation" layoutX="771.0" layoutY="157.0" mnemonicParsing="false" onAction="#onCancelReservationClick" prefHeight="37.0" prefWidth="115.0" text="取消预约" />
+      <Button fx:id="manage_files" layoutX="771.0" layoutY="22.0" mnemonicParsing="false" onAction="#onManageFilesClick" prefHeight="37.0" prefWidth="115.0" text="档案信息管理" />
+
+      <Button layoutX="629.0" layoutY="209.0" mnemonicParsing="false" onAction="#onmodifyinfclick" prefHeight="37.0" prefWidth="115.0" text="修改个人信息" />
+   </children>
+</Pane>

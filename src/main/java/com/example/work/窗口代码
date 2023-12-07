@@ -1,0 +1,5 @@
+Dialog<ButtonType> warning = new Dialog<>();
+                    warning.getDialogPane().getButtonTypes().add(new ButtonType("确认", ButtonBar.ButtonData.OK_DONE));
+                    warning.setTitle("添加成功");
+                    warning.setContentText("添加成功");
+                    warning.show();

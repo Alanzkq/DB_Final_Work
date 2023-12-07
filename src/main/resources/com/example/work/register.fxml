@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.work.RegisterController">
+   <children>
+      <Label layoutX="242.0" layoutY="14.0" text="用户注册">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Button blendMode="MULTIPLY" defaultButton="true" layoutX="252.0" layoutY="442.0" mnemonicParsing="false" onAction="#onregisterclick" prefHeight="42.0" prefWidth="89.0" text="注册">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="131.0" layoutY="132.0" prefHeight="32.0" prefWidth="68.0" text="姓名:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="186.0" text="密码:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="241.0" text="年龄:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="77.0" text="账号:" fx:id="account1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="account" layoutX="242.0" layoutY="78.0" />
+      <TextField fx:id="name" layoutX="242.0" layoutY="132.0" prefHeight="30.0" prefWidth="201.0" />
+      <PasswordField fx:id="password" layoutX="242.0" layoutY="187.0" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="age" layoutX="242.0" layoutY="239.0" prefHeight="30.0" prefWidth="54.0" />
+      <ComboBox fx:id="job" layoutX="242.0" layoutY="298.0" prefHeight="30.0" prefWidth="89.0" promptText="选择" />
+      <Label layoutX="131.0" layoutY="297.0" text="身份:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
