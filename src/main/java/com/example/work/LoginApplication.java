@@ -28,7 +28,7 @@ public class LoginApplication extends Application {
         Scene scene = new Scene(root, 617, 432);
         stage.setScene(scene);
         stage.setTitle("智慧医疗管理系统");
-        //设置不可改变大小
+        //不可改变大小
         stage.setResizable(false);
         stage.show();
         //设置登录后关闭登陆窗口
