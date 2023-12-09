@@ -1,6 +1,6 @@
 # DB_Final_Work
 
-![image](F:/Project_Java/Work/主界面.png)
+![image](https://github.com/Alanzkq/DB_Final_Work/blob/master/background/%E4%B8%BB%E7%95%8C%E9%9D%A2.png)
 
 
 
