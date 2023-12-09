@@ -1509,5 +1509,57 @@ public class MainController {
         stage.show();
 
     }
+
+    // 增加医生信息
+    @FXML
+    void onAddScheduleClick() {
+        Stage stage = new Stage();
+        VBox vbox = new VBox(10);
+        vbox.setPadding(new Insets(20));
+
+        Label titleLabel = new Label("患者病房安排");
+        titleLabel.setFont(Font.font("黑体", 24));
+        titleLabel.setTextFill(Color.color(1.0, 0.1, 0.1));
+
+        TextField number_PField = new TextField();
+        number_PField.setPromptText("患者编号");
+
+        TextField number_DField = new TextField();
+        number_DField.setPromptText("医生编号");
+
+        TextField number_WField = new TextField();
+        number_WField.setPromptText("病房编号");
+
+        // Create a button for adding the doctor
+        Button addButton = new Button("确认添加");
+        addButton.setOnAction(e -> {
+            // Retrieve doctor information from the text fields
+            String number_P = number_PField.getText();
+            String number_D = number_DField.getText();
+            String number_W = number_WField.getText();
+
+
+            try {
+                baseDao.addSchedule(number_P, number_D, number_W);
+            } catch (SQLException | ClassNotFoundException ex) {
+                ex.printStackTrace();
+            }
+
+            // Close the dialog after adding the doctor
+            stage.close();
+        });
+
+        // Add components to the VBox
+        vbox.getChildren().addAll(
+                titleLabel, number_PField,number_DField,number_WField, addButton
+        );
+
+        Scene scene = new Scene(vbox, 400, 400);
+        stage.setScene(scene);
+        stage.setTitle("新增医生信息");
+        stage.setResizable(false);
+        stage.show();
+    }
+
 }
 

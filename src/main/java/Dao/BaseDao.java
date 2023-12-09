@@ -511,6 +511,26 @@ public class BaseDao {
         }
     }
 
+    // 添加病人安排
+    public void addSchedule(String number_P, String number_D, String number_W) throws SQLException, ClassNotFoundException {
+        Connection con = this.getCon();
+
+        // 在Patient表中插入患者信息
+        String sql = "INSERT INTO PatientSchedule (Patient_number, Doctor_number, Ward_number) VALUES (?, ?, ?)";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, number_P);
+        ps.setString(2, number_D);
+        ps.setString(3, number_W);
+
+        int count = ps.executeUpdate();
+        if (count > 0) {
+            System.out.println("患者病房安排成功");
+        } else {
+            System.out.println("患者病房安排失败");
+        }
+    }
+
+
     public void updateDoctorInformation(Doctor_file doctor) throws SQLException, ClassNotFoundException {
         Connection con = getCon();
         String sql = "INSERT INTO Doctor (Doctor_number, Doctor_name, Doctor_age, Doctor_sex, Doctor_phone, Doctor_login, Doctor_password, Department_num_doctor_in) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";

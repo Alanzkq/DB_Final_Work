@@ -53,6 +53,7 @@ public class Main extends Application {
         Button manage_ward= (Button) root.lookup("#manage_ward");
         Button manage_department= (Button) root.lookup("#manage_department");
         Button show_patient= (Button) root.lookup("#show_patient");
+        Button add_schedule= (Button) root.lookup("#add_schedule");
 
 
         MainController mainController = loader.getController();
@@ -68,6 +69,7 @@ public class Main extends Application {
             manage_ward.setVisible(false);
             manage_department.setVisible(false);
             show_patient.setVisible(false);
+            add_schedule.setVisible(false);
 
 
         }else if ((user.getJob().trim()).equals("医生"))
@@ -80,6 +82,7 @@ public class Main extends Application {
 
             add_reservation.setVisible(false);
             cancel_reservation.setVisible(false);
+            add_schedule.setVisible(false);
             stage.setTitle("智慧医疗管理系统(管理员端)");
         }
         //为退出按钮绑定事件 退回登陆界面

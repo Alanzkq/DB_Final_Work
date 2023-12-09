@@ -80,6 +80,7 @@
       <Button fx:id="show_reservation" layoutX="629.0" layoutY="157.0" mnemonicParsing="false" onAction="#onShowReservationClick" prefHeight="37.0" prefWidth="115.0" text="预约记录查询" />
       <Button fx:id="cancel_reservation" layoutX="771.0" layoutY="157.0" mnemonicParsing="false" onAction="#onCancelReservationClick" prefHeight="37.0" prefWidth="115.0" text="取消预约" />
       <Button fx:id="manage_files" layoutX="771.0" layoutY="22.0" mnemonicParsing="false" onAction="#onManageFilesClick" prefHeight="37.0" prefWidth="115.0" text="档案信息管理" />
+      <Button fx:id="add_schedule" layoutX="771.0" layoutY="157.0" mnemonicParsing="false" onAction="#onAddScheduleClick" prefHeight="37.0" prefWidth="115.0" text="病人病房安排" />
 
       <Button layoutX="629.0" layoutY="209.0" mnemonicParsing="false" onAction="#onmodifyinfclick" prefHeight="37.0" prefWidth="115.0" text="修改个人信息" />
    </children>
