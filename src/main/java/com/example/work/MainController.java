@@ -1510,7 +1510,7 @@ public class MainController {
 
     }
 
-    // 增加医生信息
+    // 增加患者病房安排
     @FXML
     void onAddScheduleClick() {
         Stage stage = new Stage();
@@ -1556,7 +1556,7 @@ public class MainController {
 
         Scene scene = new Scene(vbox, 400, 400);
         stage.setScene(scene);
-        stage.setTitle("新增医生信息");
+        stage.setTitle("患者病房安排");
         stage.setResizable(false);
         stage.show();
     }
