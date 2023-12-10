@@ -355,7 +355,6 @@ public class BaseDao {
         }
     }
 
-
     // 增加病房信息
     public void addWard(Ward ward) throws SQLException, ClassNotFoundException {
         Connection con = getCon();
@@ -390,8 +389,6 @@ public class BaseDao {
             System.out.println("未找到病房或删除失败");
         }
     }
-
-
 
     // 增加处方信息
     public void addPrescription(String prescriptionNumber, String prescriptionDate) throws SQLException, ClassNotFoundException {
@@ -459,7 +456,6 @@ public class BaseDao {
     }
 
     //删除预约记录
-// 删除预约记录
     public void delReservation(String searchTerm) throws SQLException, ClassNotFoundException {
         String sql = "DELETE FROM Reservation WHERE Patient_name LIKE ?";
         PreparedStatement ps = this.getCon().prepareStatement(sql);
